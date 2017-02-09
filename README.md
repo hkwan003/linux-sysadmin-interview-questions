@@ -53,17 +53,28 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 ####[[⬆]](#toc) <a name='simple'>Simple Linux Questions:</a>
 
-* What is the name and the UID of the administrator user?
-* How to list all files, including hidden ones, in a directory?
-* What is the Unix/Linux command to remove a directory and its contents?
-* Which command will show you free/used memory? Does free memory exist on Linux?
-* How to search for the string "my konfi is the best" in files of a directory recursively?
-* How to connect to a remote server or what is SSH?
-* How to get all environment variables and how can you use them?
+* What is the name and the UID of the administrator user? 
+ 	- **user ID is a unique positive interger assigned by a Unix-like operating system to each user. the UID of 0 has a special role, it is always the root account (omnipotent admistrative user).** [http://www.linfo.org/uid.html](http://www.linfo.org/uid.html)
+* How to list all files, including hidden ones, in a directory? 
+	- **ls -a**
+* What is the Unix/Linux command to remove a directory and its contents?  
+	**rm -rf directory**
+* Which command will show you free/used memory? Does free memory exist on Linux? 
+	 **free, /proc/meminfo, vmstat, top, htop**, 
+* How to search for the string "my konfi is the best" in files of a directory recursively? 
+	 **grep -r "string" .**
+* How to connect to a remote server or what is SSH? 
+	- **Secure shell (SSH) is a protocol through which you can access your cloud server and run shell commands, SSH is encrypted with SSL, which makes it difficult for these communications to be intercepted and read. SSH uses port 22.**
+* How to get all environment variables and how can you use them? 
+ 	- **Enviromental Variables: are variables that are defined for the current shell and are inherited by any child shells or processes. Enviromental variables are used to pass information into proceses that are spawned from the shell.** - **Shell Variables: Are variables that are contained exclusively within the shell in which they were set or defined. They are often used to keep track of ephemeral data, like the current working directory.**
 * I get "command not found" when I run ```ifconfig -a```. What can be wrong?
 * What happens if I type TAB-TAB?
-* What command will show the available disk space on the Unix/Linux system?
+* What command will show the available disk space on the Unix/Linux system? 
+	- **On the internet you will find plenty of tools for checking disk space utilization in Linux. However, Linux has a strong built in utility called ‘df‘. The ‘df‘ command stand for “disk filesystem“, it is used to get full summary of available and used disk space usage of file system on Linux system.**
+
+ - **Using ‘-h‘ parameter with (df -h) will shows the file system disk space statistics in “human readable” format, means it gives the details in bytes, mega bytes and gigabyte.**
 * What commands do you know that can be used to check DNS records?
+ - **nslookup is a network administration tool for querying the Domain Name System (DNS) to obtain domain name or IP address mapping or any other specific DNS record. It is also used to troubleshoot DNS related problems. This article provides few examples on using the nslookup command.**
 * What Unix/Linux commands will alter a files ownership, files permissions?
 * What does ```chmod +x FILENAME```do?
 * What does the permission 0750 on a file mean?
