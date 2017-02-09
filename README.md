@@ -43,6 +43,9 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * Why we must choose you?
 * What function does DNS play on a network?
 * What is HTTP?
+	- **HTTP is connectonless: after making the request, the client disconnects from the server, then when the response is ready, the server re-establish the connection again and deliver the response**
+	- **HTTP can deliver any sort of data, as long as the two computers are able to read it**
+	- **HTTP is stateless, the client and server know about each other during the current request, if it closes, and the two computers want to connect again, they need to provide information to each other anew, and the connection is handled as the very first one**
 * What is an HTTP proxy and how does it work?
 * Describe briefly how HTTPS works.
 * What is SMTP? Give the basic scenario of how a mail message is delivered via SMTP.
@@ -77,6 +80,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
  - **nslookup is a network administration tool for querying the Domain Name System (DNS) to obtain domain name or IP address mapping or any other specific DNS record. It is also used to troubleshoot DNS related problems. This article provides few examples on using the nslookup command.**
 * What Unix/Linux commands will alter a files ownership, files permissions?
 * What does ```chmod +x FILENAME```do?
+	- **chmod +x on a file (your script) only means, that you'll make it executable. Right click on your script and chose Properties -> Permissions -> Allow executing file as program, leaves you with the exact same result as the command in terminal. If a file you want to change permissions on is located within the systems directory you may need to be root, like so: (be careful, while using sudo command). sudo chmod +x /usr/share/testfolder/aFile 
+Also it is not clear, what exactly you want to archive here. Please edit your question and give some more detail on the actual problem!** [You can also refer to this question, for more information: chmod u+x' versus 'chmod +x](http://askubuntu.com/questions/29589/chmod-ux-versus-chmod-x)
 * What does the permission 0750 on a file mean?
 * What does the permission 0750 on a directory mean?
 * How to add a new system user without login permissions?
@@ -95,7 +100,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 ####[[⬆]](#toc) <a name='medium'>Medium Linux Questions:</a>
 
 * What do the following commands do and how would you use them?
- * ```tee```
+ * ```tee```: tee command is used to store and view (both at the same time) output of any command. Tee command writes to STDOUT, and to a file. ```ls | tee filename```
  * ```awk```
  * ```tr```
  * ```cut```
